@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_root_left"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_root_right"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/tv_my_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_root_left"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="8dp"
+        android:textSize="25sp"
+        />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="25dp"
+        android:src="@mipmap/ic_profile"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_root_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_root_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_profile"
+        app:layout_constraintBottom_toTopOf="@id/tv_call"
+/>
+
+    <ImageView
+        android:id="@+id/iv_ic_call"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_baseline_call_24"
+        app:layout_constraintBottom_toBottomOf="@id/tv_call"
+        app:layout_constraintStart_toEndOf="@id/guideline_root_left"
+        app:layout_constraintEnd_toStartOf="@id/tv_call"/>
+
+    <TextView
+        android:id="@+id/tv_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-20dp"
+        android:text="Позвонить"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@id/guideline_root_right"
+        app:layout_constraintStart_toEndOf="@id/guideline_root_left"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"/>
+
+    <TextView
+        android:id="@+id/tv_tel_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Телефон"
+        android:layout_marginBottom="-78dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_profile_number"
+        app:layout_constraintStart_toStartOf="@id/guideline_root_left"
+        app:layout_constraintTop_toBottomOf="@id/tv_call"/>
+
+    <TextView
+        android:id="@+id/tv_profile_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Карта сотрудника"
+        android:layout_marginBottom="-78dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideline_root_right"
+        app:layout_constraintStart_toEndOf="@id/tv_tel_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_call"/>
+
+    <TextView
+        android:id="@+id/tv_fio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ФИО"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_number"
+        app:layout_constraintStart_toStartOf="@id/guideline_root_left"
+        app:layout_constraintEnd_toStartOf="@id/tv_fiodata" />
+
+    <TextView
+        android:id="@+id/tv_fiodata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ФИО дата"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile_number"
+        app:layout_constraintStart_toStartOf="@id/tv_fio"
+        app:layout_constraintEnd_toStartOf="@id/guideline_root_right" />
+</androidx.constraintlayout.widget.ConstraintLayout>
