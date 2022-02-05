@@ -10,7 +10,6 @@ import java.util.regex.Pattern
 
 class FragmentContactDetails : Fragment(R.layout.fragment_contact_details) {
     private val profileNumber: TextView by lazy { requireView().findViewById<TextView>(R.id.tv_profile_number) }
-    private val profileFI: TextView by lazy { requireView().findViewById<TextView>(R.id.tv_fiodata) }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val id = arguments?.getInt(TelephoneBookFragment.WORKER_ID) ?: 0

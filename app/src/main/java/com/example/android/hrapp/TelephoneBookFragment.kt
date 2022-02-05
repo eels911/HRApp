@@ -10,9 +10,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.hrapp.domain.WorkerDataSource
 import com.example.android.hrapp.models.Worker
+import com.example.android.hrapp.ui.BaseFragment
 import kotlin.math.log
 
-class TelephoneBookFragment:Fragment() {
+class TelephoneBookFragment:BaseFragment() {
 
 
     companion object { const val WORKER_ID = "WORKER_id" }
